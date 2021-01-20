@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "Trips";
+}
+
+@model List<Lab10.trip>
+<div class="container">
+    <div class="row">
+        <table class="table">
+            <tr>
+                <th>ID</th>
+                <th>Car</th>
+                <th>Obj From</th>
+                <th>Obj To</th>
+                <th>Date From</th>
+                <th>Date To</th>
+                <th>Time</th>
+            </tr>
+
+            @foreach (var trip in Model)
+            {
+        <tr>
+            <td>
+                @Html.DisplayFor(_ => trip.id)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.car.name)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip._object.name)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.object1.name)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.date_from)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.date_to)
+            </td>
+            <td>
+                @Html.DisplayFor(_ => trip.time)
+            </td>
+        </tr>
+            }
+        </table>
+    </div>
+</div>
