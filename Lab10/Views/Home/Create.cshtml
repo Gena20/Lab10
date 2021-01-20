@@ -1,0 +1,32 @@
+﻿@model Lab10.trip
+    <div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                @Html.LabelFor(model => model.car)
+                <p>@Html.EditorFor(model => model.car.name)</p>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.date_from)
+                <p>@Html.EditorFor(model => model.date_from)</p>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.date_to)
+                <p>@Html.EditorFor(model => model.date_to)</p>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model._object)
+                <p>@Html.EditorFor(model => model._object)</p>
+            </div>
+
+            <div>
+                @Html.LabelFor(model => model.object1)
+                <p>@Html.EditorFor(model => model.object1)</p>
+            </div>
+            <p><input type="submit" value="Добавить" /></p>
+        }
+    </div>
